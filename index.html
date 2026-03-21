@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Caseiro | Restaurante & Self-Service</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f1d592;
+            --dark: #0a0a0a;
+            --card-bg: #161616;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--dark); color: var(--white); font-family: 'Montserrat', sans-serif; line-height: 1.6; }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://i.postimg.cc/yYy3cG4R/1774051931197.png');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .logo-area {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 3rem;
+            border: 2px solid var(--gold);
+            display: inline-block;
+            padding: 20px 40px;
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.7);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 18px 35px;
+            font-weight: 800;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-anota { background: #00a859; color: white; border-bottom: 4px solid #007d42; }
+        .btn-ifood { background: #ea1d2c; color: white; border-bottom: 4px solid #b3121d; }
+        .btn:hover { transform: translateY(-3px); filter: brightness(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+        .container { padding: 60px 8%; }
+        
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-bottom: 100px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
+
+        .card img { width: 100%; height: 260px; object-fit: cover; border-bottom: 2px solid #222; }
+
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; text-align: center; }
+        .card-body h3 { font-family: 'Cinzel', serif; color: var(--gold-light); margin-bottom: 10px; font-size: 1.2rem; min-height: 3rem; }
+        .card-body p { font-size: 0.9rem; color: #999; margin-bottom: 20px; }
+        .price { font-size: 1.5rem; color: var(--gold); font-weight: 800; margin-top: auto; }
+
+        .footer-info {
+            background: #050505;
+            padding: 80px 8%;
+            border-top: 1px solid var(--gold);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-info h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 25px; font-size: 2rem; }
+        .footer-info p { margin-bottom: 15px; font-size: 1.1rem; color: #ccc; }
+        .footer-info b { color: var(--gold); }
+
+        @media (max-width: 768px) {
+            .footer-info { grid-template-columns: 1fr; text-align: center; }
+            .logo-area { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">SABOR CASEIRO</div>
+        <p style="color:var(--gold-light); letter-spacing: 5px; font-weight: 300;">RESTAURANTE & SELF-SERVICE</p>
+        
+        <div class="action-buttons">
+            <a href="https://pedido.anota.ai/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="btn btn-anota" target="_blank">🛒 Fazer Pedido (Anota AI)</a>
+            <a href="https://www.ifood.com.br/delivery/brasilia-df/sabor-caseiro-setor-de-habitacoes-individuais-norte/1d7c5b13-0a08-4503-903d-4dd8856c9d06" class="btn btn-ifood" target="_blank">🛵 Pedir no iFood</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">Nossas Marmitas</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="https://i.postimg.cc/x8KJsxkn/1774051595708.png" alt="Carne Cozida">
+                <div class="card-body">
+                    <h3>Marmita Carne Cozida C/ Mandioca</h3>
+                    <p>Serve uma pessoa</p>
+                    <span class="price">R$ 25,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/65f4nPJ4/1774051713715.png" alt="Frango Grelhado">
+                <div class="card-body">
+                    <h3>Marmita De Peito De Frango Grelhado</h3>
+                    <p>Proteína suculenta com acompanhamentos.</p>
+                    <span class="price">R$ 24,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/xT3NMZDz/1774051823106.png" alt="Strogonoff">
+                <div class="card-body">
+                    <h3>Marmita De Strogonoff De Carne</h3>
+                    <p>Receita clássica e cremosa.</p>
+                    <span class="price">R$ 24,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/yYy3cG4R/1774051931197.png" alt="Feijoada">
+                <div class="card-body">
+                    <h3>Marmita De Feijoada</h3>
+                    <p>Tradição completa e saborosa.</p>
+                    <span class="price">R$ 26,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/yYy3cG49/1774052319168.png" alt="Filé Suíno">
+                <div class="card-body">
+                    <h3>Marmita De Filé Suíno</h3>
+                    <p>Corte selecionado com tempero da casa.</p>
+                    <span class="price">R$ 24,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/vHtxfKFz/1774052442611.png" alt="Rabada">
+                <div class="card-body">
+                    <h3>Marmita De Rabada Bovina</h3>
+                    <p>Prato típico rico em sabor.</p>
+                    <span class="price">R$ 28,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/W1pFn7Ty/1774052599529.png" alt="Bife Acebolado">
+                <div class="card-body">
+                    <h3>Marmita De Bife Acebolado</h3>
+                    <p>O sabor caseiro que você adora.</p>
+                    <span class="price">R$ 28,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/dVQkB9JJ/1774052751306.png" alt="Tilápia">
+                <div class="card-body">
+                    <h3>Marmita De Filé De Tilápia</h3>
+                    <p>Leveza e nutrição no seu almoço.</p>
+                    <span class="price">R$ 28,99</span>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Bebidas Geladas</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="https://i.postimg.cc/R0yWv5Kr/68b706b128e3e303010cc803f087324c.jpg" alt="Guaraná Lata">
+                <div class="card-body">
+                    <h3>Guaraná Antártica Lata</h3>
+                    <span class="price">R$ 7,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/XvmrnSd4/2087e377e2e4bf4c9d0b66fd1e00a088.jpg" alt="Coca Lata">
+                <div class="card-body">
+                    <h3>Coca-Cola Lata</h3>
+                    <span class="price">R$ 7,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/Xq3d066N/Screenshot_20260320_214019_2.jpg" alt="Schweppes">
+                <div class="card-body">
+                    <h3>Schweppes Citrus Lata</h3>
+                    <span class="price">R$ 7,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/1z28yhw1/d06a924d06eb37166e3d6e8b0a50ba16.jpg" alt="Água Tônica">
+                <div class="card-body">
+                    <h3>Água Tônica Lata</h3>
+                    <span class="price">R$ 6,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/FK8Yh53m/e8357c18cee6b8e5d52e46c74105fa12.jpg" alt="Coca Mini">
+                <div class="card-body">
+                    <h3>Coca-Cola Mini Lata</h3>
+                    <span class="price">R$ 5,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/9fKDc5Zj/5036f83e9972f6e275b0456526fe3122.jpg" alt="Coca Mini Zero">
+                <div class="card-body">
+                    <h3>Coca-Cola Mini Lata Zero</h3>
+                    <span class="price">R$ 5,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/cJ2vdywx/7bc2bb65d00abf302bb1d8c8276e936c.jpg" alt="Coca Mini Café">
+                <div class="card-body">
+                    <h3>Coca-Cola Mini Lata Café</h3>
+                    <span class="price">R$ 5,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/TPFKTMgR/c2593e2552881aa62ce90f251abba16f.jpg" alt="Coca 600ml">
+                <div class="card-body">
+                    <h3>Coca-Cola 600ml</h3>
+                    <span class="price">R$ 10,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/LswJmKL8/fa0c69206e24fa47956fdbaaf820b523.jpg" alt="Coca Zero 600ml">
+                <div class="card-body">
+                    <h3>Coca-Cola Zero 600ml</h3>
+                    <span class="price">R$ 10,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/HLRrTDXj/c7602098d4a93fbf99c527d0e7532ea5-1.jpg" alt="Guaraná 600ml">
+                <div class="card-body">
+                    <h3>Guaraná Antártica 600ml</h3>
+                    <span class="price">R$ 10,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/B6FX6YB3/c7602098d4a93fbf99c527d0e7532ea5.jpg" alt="Guaraná 1.5l">
+                <div class="card-body">
+                    <h3>Guaraná Antártica 1,5l</h3>
+                    <span class="price">R$ 14,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/zBhVBtFJ/edd58c4c60d09cadb299913f076f8e79.jpg" alt="Suco Uva">
+                <div class="card-body">
+                    <h3>Suco Dell Valle Uva Lata</h3>
+                    <span class="price">R$ 8,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/nzmCzRGZ/d500ae8f0a0d2c08bb1673515f6d95bb.jpg" alt="Suco Pêssego">
+                <div class="card-body">
+                    <h3>Suco Dell Valle Pêssego Lata</h3>
+                    <span class="price">R$ 8,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/fLdJL2fN/79ed4d2d3cc6ad46c62f489796fdc49c.jpg" alt="Suco Maracujá">
+                <div class="card-body">
+                    <h3>Suco Dell Valle Maracujá Lata</h3>
+                    <span class="price">R$ 8,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/mD9tDXyB/6d3d460684314ee88061b399d93431c5.jpg" alt="Água Sem Gás">
+                <div class="card-body">
+                    <h3>Água Sem Gás 500ml</h3>
+                    <span class="price">R$ 3,50</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/d1CL1HjJ/17b4f44de72db6652363b51ccc9d25bf.jpg" alt="Água Com Gás">
+                <div class="card-body">
+                    <h3>Água Com Gás 500ml</h3>
+                    <span class="price">R$ 4,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/KzTRzqDG/56dba4c2e527c2f3de516499a4449b5d.jpg" alt="Ice Tea">
+                <div class="card-body">
+                    <h3>Ice Tea Limão 300ml</h3>
+                    <span class="price">R$ 6,00</span>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Sobremesas</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="https://i.postimg.cc/MTBvTPmZ/5363040424886627f468ac5865e82cde.jpg" alt="Chokito">
+                <div class="card-body">
+                    <h3>Chocolate Chokito</h3>
+                    <span class="price">R$ 5,00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.postimg.cc/zBhVBtFG/e576f29a81edd5807a6102d1c9719b89.jpg" alt="Talento">
+                <div class="card-body">
+                    <h3>Chocolate Talento Cereais & Passas</h3>
+                    <span class="price">R$ 6,00</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="footer-info">
+        <div>
+            <h2>Onde Estamos</h2>
+            <p><b>📍 Endereço:</b> Shin CA 2 bloco L lote 15 loja 10, Lago Norte</p>
+            <p><b>💬 WhatsApp:</b> (61) 99156-9744</p>
+            <p><b>📞 Telefone Fixo:</b> (61) 3468-2444</p>
+            <p><b>⏰ Horário de Funcionamento:</b> Almoço todos os dias</p>
+        </div>
+        <div>
+            <h2>Peça pelo WhatsApp</h2>
+            <p>Prefere falar com a gente? Clique no botão abaixo e faça seu pedido direto.</p>
+            <div style="margin-top:30px;">
+                <a href="https://wa.me/5561991569744" class="btn btn-anota" style="background:#25D366; border-bottom: 4px solid #128C7E;">📱 Chamar no Zap</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; background: #000; font-size: 0.85rem; color: #666; letter-spacing: 1px;">
+        © 2026 SABOR CASEIRO - COMIDA DE VERDADE FEITA COM CARINHO.
+    </footer>
+
+</body>
+</html>
