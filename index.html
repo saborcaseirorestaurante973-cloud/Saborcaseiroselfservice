@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sabor Caseiro no Lago Norte, Brasília. Marmitas variadas, feijoada, carnes e bebidas. O melhor tempero caseiro da região para delivery ou retirada.">
+    <meta name="description" content="Sabor Caseiro: O melhor restaurante e self-service do Lago Norte, Brasília. Marmitas caseiras, feijoada, carnes e bebidas geladas. Peça agora!">
     <meta name="google-site-verification" content="uMZ66YgwrSxB0uxvSp1na4YG_kOnOz6CLN_LVQoSiK0" />
     <title>Sabor Caseiro | Restaurante & Self-Service Lago Norte</title>
     
@@ -18,7 +18,8 @@
             --dark: #0a0a0a;
             --card-bg: #161616;
             --white: #ffffff;
-            --text-gray: #bbbbbb; /* Melhora contraste para acessibilidade */
+            /* Cor de texto ajustada para contraste (Acessibilidade) */
+            --text-muted: #d1d1d1; 
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -52,6 +53,7 @@
             margin-top: 35px;
         }
 
+        /* Botões com contraste e nomes acessíveis */
         .btn {
             text-decoration: none;
             padding: 18px 35px;
@@ -62,15 +64,19 @@
             font-size: 0.95rem;
             letter-spacing: 1px;
             display: inline-block;
+            border: none;
+            cursor: pointer;
         }
 
-        .btn-anota { background: #00a859; color: white; border-bottom: 4px solid #005e32; }
-        .btn-ifood { background: #ea1d2c; color: white; border-bottom: 4px solid #a3141e; }
-        .btn-whatsapp { background: #25D366; color: white; border-bottom: 4px solid #128C7E; }
+        .btn-anota { background: #008547; color: white; border-bottom: 4px solid #005e32; }
+        .btn-ifood { background: #ea1d2c; color: white; border-bottom: 4px solid #b3121d; }
+        .btn-whatsapp { background: #25D366; color: #000; border-bottom: 4px solid #128C7E; font-weight: 900; }
+        
         .btn:hover { transform: translateY(-3px); filter: brightness(1.1); }
 
-        .container { padding: 60px 8%; max-width: 1300px; margin: 0 auto; }
+        .container { padding: 60px 8%; max-width: 1200px; margin: 0 auto; }
         
+        /* Hierarquia de títulos correta para SEO */
         .section-title {
             font-family: 'Cinzel', serif;
             color: var(--gold);
@@ -92,7 +98,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 35px;
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
 
         .card {
@@ -100,17 +106,18 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid #2a2a2a;
+            transition: 0.4s;
             display: flex;
             flex-direction: column;
-            transition: 0.4s;
         }
 
         .card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .card img { width: 100%; height: 260px; object-fit: cover; }
+
+        .card img { width: 100%; height: 260px; object-fit: cover; border-bottom: 2px solid #222; }
 
         .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; text-align: center; }
-        .card-body h3 { font-family: 'Cinzel', serif; color: var(--gold-light); margin-bottom: 10px; font-size: 1.2rem; }
-        .card-body p { font-size: 0.9rem; color: var(--text-gray); margin-bottom: 20px; }
+        .card-body h3 { font-family: 'Cinzel', serif; color: var(--gold-light); margin-bottom: 10px; font-size: 1.2rem; min-height: 3rem; }
+        .card-body p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; }
         .price { font-size: 1.5rem; color: var(--gold); font-weight: 800; margin-top: auto; }
 
         .footer-info {
@@ -123,15 +130,14 @@
         }
 
         .footer-info h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 25px; font-size: 2rem; }
-        .footer-info p { margin-bottom: 15px; font-size: 1.1rem; color: #ddd; }
+        .footer-info p { margin-bottom: 15px; font-size: 1.1rem; color: #eee; }
         .footer-info b { color: var(--gold); }
 
-        footer { text-align: center; padding: 40px; background: #000; font-size: 0.85rem; color: #777; }
+        footer { text-align: center; padding: 40px; background: #000; font-size: 0.85rem; color: #999; }
 
         @media (max-width: 768px) {
-            .logo-area { font-size: 2rem; }
-            .section-title { font-size: 1.8rem; }
             .footer-info { text-align: center; }
+            .logo-area { font-size: 2rem; }
         }
     </style>
 </head>
@@ -139,18 +145,19 @@
 
     <header>
         <div class="logo-area">SABOR CASEIRO</div>
-        <h1 style="color:var(--gold-light); letter-spacing: 5px; font-weight: 300; font-size: 1.2rem;">RESTAURANTE & SELF-SERVICE</h1>
+        <h1 style="color:var(--gold-light); letter-spacing: 5px; font-weight: 300; font-size: 1rem;">RESTAURANTE & SELF-SERVICE NO LAGO NORTE</h1>
         
-        <nav class="action-buttons">
-            <a href="https://pedido.anota.ai/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="btn btn-anota" target="_blank" rel="noopener" aria-label="Fazer pedido pelo sistema Anota AI">🛒 Fazer Pedido (Anota AI)</a>
-            <a href="https://www.ifood.com.br/delivery/brasilia-df/sabor-caseiro-setor-de-habitacoes-individuais-norte/1d7c5b13-0a08-4503-903d-4dd8856c9d06" class="btn btn-ifood" target="_blank" rel="noopener" aria-label="Pedir entrega pelo iFood">🛵 Pedir no iFood</a>
+        <nav class="action-buttons" aria-label="Links de pedido">
+            <a href="https://pedido.anota.ai/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="btn btn-anota" target="_blank" rel="noopener" title="Fazer pedido via Anota AI">🛒 Fazer Pedido (Anota AI)</a>
+            <a href="https://www.ifood.com.br/delivery/brasilia-df/sabor-caseiro-setor-de-habitacoes-individuais-norte/1d7c5b13-0a08-4503-903d-4dd8856c9d06" class="btn btn-ifood" target="_blank" rel="noopener" title="Pedir pelo iFood">🛵 Pedir no iFood</a>
         </nav>
     </header>
 
     <main class="container">
         
         <h2 class="section-title">Nossas Marmitas</h2>
-        <div class="grid">
+        <section class="grid">
+            
             <article class="card">
                 <img src="https://i.postimg.cc/x8KJsxkn/1774051595708.png" alt="Marmita de Carne Cozida com Mandioca" loading="lazy">
                 <div class="card-body">
@@ -222,56 +229,57 @@
                     <span class="price">R$ 28,99</span>
                 </div>
             </article>
-        </div>
+
+        </section>
 
         <h2 class="section-title">Bebidas Geladas</h2>
-        <div class="grid">
-            <div class="card"><img src="https://i.postimg.cc/R0yWv5Kr/68b706b128e3e303010cc803f087324c.jpg" alt="Guaraná Antártica Lata" loading="lazy"><div class="card-body"><h3>Guaraná Antártica Lata</h3><span class="price">R$ 7,00</span></div></div>
+        <section class="grid">
+            <div class="card"><img src="https://i.postimg.cc/R0yWv5Kr/68b706b128e3e303010cc803f087324c.jpg" alt="Guaraná Antarctica Lata" loading="lazy"><div class="card-body"><h3>Guaraná Antártica Lata</h3><span class="price">R$ 7,00</span></div></div>
             <div class="card"><img src="https://i.postimg.cc/XvmrnSd4/2087e377e2e4bf4c9d0b66fd1e00a088.jpg" alt="Coca-Cola Lata" loading="lazy"><div class="card-body"><h3>Coca-Cola Lata</h3><span class="price">R$ 7,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/Xq3d066N/Screenshot_20260320_214019_2.jpg" alt="Schweppes Citrus" loading="lazy"><div class="card-body"><h3>Schweppes Citrus Lata</h3><span class="price">R$ 7,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/1z28yhw1/d06a924d06eb37166e3d6e8b0a50ba16.jpg" alt="Água Tônica" loading="lazy"><div class="card-body"><h3>Água Tônica Lata</h3><span class="price">R$ 6,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/FK8Yh53m/e8357c18cee6b8e5d52e46c74105fa12.jpg" alt="Coca-Cola Mini" loading="lazy"><div class="card-body"><h3>Coca-Cola Mini Lata</h3><span class="price">R$ 5,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/9fKDc5Zj/5036f83e9972f6e275b0456526fe3122.jpg" alt="Coca-Cola Mini Zero" loading="lazy"><div class="card-body"><h3>Coca-Cola Mini Lata Zero</h3><span class="price">R$ 5,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/cJ2vdywx/7bc2bb65d00abf302bb1d8c8276e936c.jpg" alt="Coca-Cola Mini Café" loading="lazy"><div class="card-body"><h3>Coca-Cola Mini Lata Café</h3><span class="price">R$ 5,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/Xq3d066N/Screenshot_20260320_214019_2.jpg" alt="Schweppes Citrus Lata" loading="lazy"><div class="card-body"><h3>Schweppes Citrus Lata</h3><span class="price">R$ 7,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/1z28yhw1/d06a924d06eb37166e3d6e8b0a50ba16.jpg" alt="Água Tônica Lata" loading="lazy"><div class="card-body"><h3>Água Tônica Lata</h3><span class="price">R$ 6,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/FK8Yh53m/e8357c18cee6b8e5d52e46c74105fa12.jpg" alt="Coca-Cola Mini Lata" loading="lazy"><div class="card-body"><h3>Coca-Cola Mini Lata</h3><span class="price">R$ 5,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/9fKDc5Zj/5036f83e9972f6e275b0456526fe3122.jpg" alt="Coca-Cola Mini Lata Zero" loading="lazy"><div class="card-body"><h3>Coca-Cola Mini Lata Zero</h3><span class="price">R$ 5,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/cJ2vdywx/7bc2bb65d00abf302bb1d8c8276e936c.jpg" alt="Coca-Cola Mini Lata Café" loading="lazy"><div class="card-body"><h3>Coca-Cola Mini Lata Café</h3><span class="price">R$ 5,00</span></div></div>
             <div class="card"><img src="https://i.postimg.cc/TPFKTMgR/c2593e2552881aa62ce90f251abba16f.jpg" alt="Coca-Cola 600ml" loading="lazy"><div class="card-body"><h3>Coca-Cola 600ml</h3><span class="price">R$ 10,00</span></div></div>
             <div class="card"><img src="https://i.postimg.cc/LswJmKL8/fa0c69206e24fa47956fdbaaf820b523.jpg" alt="Coca-Cola Zero 600ml" loading="lazy"><div class="card-body"><h3>Coca-Cola Zero 600ml</h3><span class="price">R$ 10,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/HLRrTDXj/c7602098d4a93fbf99c527d0e7532ea5-1.jpg" alt="Guaraná 600ml" loading="lazy"><div class="card-body"><h3>Guaraná Antártica 600ml</h3><span class="price">R$ 10,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/B6FX6YB3/c7602098d4a93fbf99c527d0e7532ea5.jpg" alt="Guaraná 1.5 Litro" loading="lazy"><div class="card-body"><h3>Guaraná Antártica 1,5l</h3><span class="price">R$ 14,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/zBhVBtFJ/edd58c4c60d09cadb299913f076f8e79.jpg" alt="Suco Del Valle Uva" loading="lazy"><div class="card-body"><h3>Suco Dell Valle Uva Lata</h3><span class="price">R$ 8,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/nzmCzRGZ/d500ae8f0a0d2c08bb1673515f6d95bb.jpg" alt="Suco Del Valle Pêssego" loading="lazy"><div class="card-body"><h3>Suco Dell Valle Pêssego Lata</h3><span class="price">R$ 8,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/fLdJL2fN/79ed4d2d3cc6ad46c62f489796fdc49c.jpg" alt="Suco Del Valle Maracujá" loading="lazy"><div class="card-body"><h3>Suco Dell Valle Maracujá Lata</h3><span class="price">R$ 8,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/mD9tDXyB/6d3d460684314ee88061b399d93431c5.jpg" alt="Água Mineral Sem Gás" loading="lazy"><div class="card-body"><h3>Água Sem Gás 500ml</h3><span class="price">R$ 3,50</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/d1CL1HjJ/17b4f44de72db6652363b51ccc9d25bf.jpg" alt="Água Mineral Com Gás" loading="lazy"><div class="card-body"><h3>Água Com Gás 500ml</h3><span class="price">R$ 4,00</span></div></div>
-            <div class="card"><img src="https://i.postimg.cc/KzTRzqDG/56dba4c2e527c2f3de516499a4449b5d.jpg" alt="Ice Tea Limão" loading="lazy"><div class="card-body"><h3>Ice Tea Limão 300ml</h3><span class="price">R$ 6,00</span></div></div>
-        </div>
+            <div class="card"><img src="https://i.postimg.cc/HLRrTDXj/c7602098d4a93fbf99c527d0e7532ea5-1.jpg" alt="Guaraná Antarctica 600ml" loading="lazy"><div class="card-body"><h3>Guaraná Antártica 600ml</h3><span class="price">R$ 10,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/B6FX6YB3/c7602098d4a93fbf99c527d0e7532ea5.jpg" alt="Guaraná Antarctica 1.5l" loading="lazy"><div class="card-body"><h3>Guaraná Antártica 1,5l</h3><span class="price">R$ 14,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/zBhVBtFJ/edd58c4c60d09cadb299913f076f8e79.jpg" alt="Suco Del Valle Uva Lata" loading="lazy"><div class="card-body"><h3>Suco Dell Valle Uva Lata</h3><span class="price">R$ 8,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/nzmCzRGZ/d500ae8f0a0d2c08bb1673515f6d95bb.jpg" alt="Suco Del Valle Pêssego Lata" loading="lazy"><div class="card-body"><h3>Suco Dell Valle Pêssego Lata</h3><span class="price">R$ 8,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/fLdJL2fN/79ed4d2d3cc6ad46c62f489796fdc49c.jpg" alt="Suco Del Valle Maracujá Lata" loading="lazy"><div class="card-body"><h3>Suco Dell Valle Maracujá Lata</h3><span class="price">R$ 8,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/mD9tDXyB/6d3d460684314ee88061b399d93431c5.jpg" alt="Água Mineral Sem Gás 500ml" loading="lazy"><div class="card-body"><h3>Água Sem Gás 500ml</h3><span class="price">R$ 3,50</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/d1CL1HjJ/17b4f44de72db6652363b51ccc9d25bf.jpg" alt="Água Mineral Com Gás 500ml" loading="lazy"><div class="card-body"><h3>Água Com Gás 500ml</h3><span class="price">R$ 4,00</span></div></div>
+            <div class="card"><img src="https://i.postimg.cc/KzTRzqDG/56dba4c2e527c2f3de516499a4449b5d.jpg" alt="Ice Tea Limão 300ml" loading="lazy"><div class="card-body"><h3>Ice Tea Limão 300ml</h3><span class="price">R$ 6,00</span></div></div>
+        </section>
 
         <h2 class="section-title">Sobremesas</h2>
-        <div class="grid">
-            <div class="card"><img src="https://i.postimg.cc/MTBvTPmZ/5363040424886627f468ac5865e82cde.jpg" alt="Chocolate Chokito" loading="lazy"><div class="card-body"><h3>Chocolate Chokito</h3><span class="price">R$ 5,00</span></div></div>
+        <section class="grid">
+            <div class="card"><img src="https://i.postimg.cc/MTBvTPmZ/5363040424886627f468ac5865e82cde.jpg" alt="Chocolate Chokito Nestlé" loading="lazy"><div class="card-body"><h3>Chocolate Chokito</h3><span class="price">R$ 5,00</span></div></div>
             <div class="card"><img src="https://i.postimg.cc/zBhVBtFG/e576f29a81edd5807a6102d1c9719b89.jpg" alt="Chocolate Talento Cereais e Passas" loading="lazy"><div class="card-body"><h3>Chocolate Talento Cereais & Passas</h3><span class="price">R$ 6,00</span></div></div>
-        </div>
+        </section>
 
     </main>
 
-    <section class="footer-info">
+    <aside class="footer-info">
         <div>
             <h2>Onde Estamos</h2>
-            <p><b>📍 Endereço:</b> Shin CA 2 bloco L lote 15 loja 10, Lago Norte, Brasília</p>
+            <p><b>📍 Endereço:</b> Shin CA 2 bloco L lote 15 loja 10, Lago Norte, Brasília - DF</p>
             <p><b>💬 WhatsApp:</b> (61) 99156-9744</p>
             <p><b>📞 Telefone Fixo:</b> (61) 3468-2444</p>
-            <p><b>⏰ Horário:</b> Almoço todos os dias</p>
+            <p><b>⏰ Funcionamento:</b> Almoço todos os dias</p>
         </div>
         <div>
             <h2>Peça pelo WhatsApp</h2>
-            <p>Fale conosco e faça seu pedido de forma personalizada.</p>
+            <p>Prefere falar com a gente? Clique no botão e faça seu pedido direto no WhatsApp.</p>
             <div style="margin-top:30px;">
-                <a href="https://wa.me/5561991569744" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="Enviar mensagem no WhatsApp para o Sabor Caseiro">📱 Chamar no Zap</a>
+                <a href="https://wa.me/5561991569744" class="btn btn-whatsapp" target="_blank" rel="noopener" title="Chamar no WhatsApp Sabor Caseiro">📱 Chamar no Zap</a>
             </div>
         </div>
-    </section>
+    </aside>
 
     <footer>
-        <p>© 2026 SABOR CASEIRO - COMIDA DE VERDADE FEITA COM CARINHO. TODOS OS DIREITOS RESERVADOS.</p>
+        <p>&copy; 2026 SABOR CASEIRO - COMIDA DE VERDADE FEITA COM CARINHO.</p>
     </footer>
 
 </body>
